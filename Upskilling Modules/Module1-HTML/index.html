@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            margin: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #welcomeBanner {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 3px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .galleryTable{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+.galleryTable td{
+    padding:15px;
+}
+
+.eventImage{
+    width:220px;
+    height:150px;
+    border:3px solid blue;
+}
+
+form{
+    margin-top:20px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+
+button{
+    background:blue;
+    color:white;
+    padding:10px;
+    cursor:pointer;
+}
+
+output{
+    color:green;
+    font-weight:bold;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🏛 Local Community Event Portal</h1>
+        <p>Connecting Residents with Community Activities</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+
+        <!-- External Link -->
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Home Section -->
+        <section id="home">
+
+            <!-- Welcome Banner -->
+            <div id="welcomeBanner">
+
+                Welcome Back, Resident!
+
+                <br><br>
+
+                Enjoy our
+
+                <span style="color:red; font-weight:bold;">
+                    Special Summer Offer!
+                </span>
+
+            </div>
+
+            <br>
+
+            <p class="highlight">
+                Register now to participate in exciting local events.
+            </p>
+
+            <p>
+                Our portal provides information about community programs,
+                workshops, cultural festivals, and volunteer activities.
+            </p>
+
+            <p class="highlight">
+                Stay connected with your neighbourhood.
+            </p>
+
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+
+            <h2>Upcoming Events</h2>
+
+            <ul>
+                <li>🎵 Music Festival</li>
+                <li>🌳 Tree Plantation Drive</li>
+                <li>🏃 Community Marathon</li>
+                <li>📚 Book Fair</li>
+                <li>🎨 Art Exhibition</li>
+            </ul>
+
+        </section>
+
+        <!-- Image Gallery -->
+<section id="gallery">
+
+<h2>Community Event Gallery</h2>
+
+<table class="galleryTable">
+
+<caption><b>Previous Community Events</b></caption>
+
+<tr>
+
+<td>
+<img src="images/event1.jpeg"
+class="eventImage"
+alt="Music Festival"
+title="Music Festival"
+ondblclick="enlarge(this)">
+<br>
+Music Festival
+</td>
+
+<td>
+<img src="images/event2.jpeg"
+class="eventImage"
+alt="Tree Plantation"
+title="Tree Plantation"
+ondblclick="enlarge(this)">
+<br>
+Tree Plantation
+</td>
+
+<td>
+<img src="images/event3.jpeg"
+class="eventImage"
+alt="Marathon"
+title="Community Marathon"
+ondblclick="enlarge(this)">
+<br>
+Community Marathon
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<img src="images/event4.jpg"
+class="eventImage"
+alt="Art Exhibition"
+title="Art Exhibition"
+ondblclick="enlarge(this)">
+<br>
+Art Exhibition
+</td>
+
+<td>
+<img src="images/event5.jpeg"
+class="eventImage"
+alt="Book Fair"
+title="Book Fair"
+ondblclick="enlarge(this)">
+<br>
+Book Fair
+</td>
+
+<td>
+<img src="images/event6.jpeg"
+class="eventImage"
+alt="Food Festival"
+title="Food Festival"
+ondblclick="enlarge(this)">
+<br>
+Food Festival
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section id="registration">
+
+<h2>Event Registration Form</h2>
+
+<form onsubmit="registerEvent();return false;">
+
+<label>Name</label>
+
+<input
+type="text"
+placeholder="Enter your name"
+required
+autofocus>
+
+<label>Email</label>
+
+<input
+type="email"
+placeholder="Enter email"
+required>
+
+<label>Date</label>
+
+<input
+type="date"
+required>
+
+<label>Phone</label>
+
+<input
+type="text"
+id="phone"
+placeholder="Enter phone number"
+onblur="validatePhone()"
+required>
+
+<label>Event Type</label>
+
+<select
+id="eventType"
+onchange="showFee()"
+required>
+
+<option value="">Select Event</option>
+
+<option value="₹100">Music Festival</option>
+
+<option value="₹150">Tree Plantation</option>
+
+<option value="₹200">Community Marathon</option>
+
+<option value="₹120">Book Fair</option>
+
+<option value="₹180">Art Exhibition</option>
+
+</select>
+
+<p id="fee"></p>
+
+<label>Feedback</label>
+
+<textarea
+id="feedback"
+placeholder="Write your feedback"
+onkeyup="countCharacters()"></textarea>
+
+<p id="count">Characters : 0</p>
+
+<button type="submit">
+
+Register
+
+</button>
+<button type="button" onclick="clearPreference()">
+
+Clear Preferences
+
+</button>
+
+<br><br>
+
+<output id="outputMessage"></output>
+
+</form>
+
+</section>
+
+<!-- Video Invite -->
+
+<section id="video">
+
+<h2>Community Event Promo Video</h2>
+
+<video
+width="500"
+controls
+oncanplay="videoReady()">
+
+<source src="videos/event.mp4" type="video/mp4">
+
+Your browser does not support video.
+
+</video>
+
+<p id="videoMessage"></p>
+
+</section>
+
+<section id="location">
+
+<h2>Find Nearby Events</h2>
+
+<button onclick="findLocation()">
+
+Find Nearby Events
+
+</button>
+
+<p id="locationResult"></p>
+
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>Email : community@cityportal.com</p>
+
+            <p>Phone : +91 9876543210</p>
+
+            <p>Address : City Community Hall</p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Local Community Event Portal | All Rights Reserved
+        </p>
+
+    </footer>
+
+    <script>
+
+function registerEvent(){
+
+document.getElementById("outputMessage").innerHTML=
+"Registration Successful!";
+
+alert("Registration Successful!");
+
+}
+
+function validatePhone(){
+
+let phone=document.getElementById("phone").value;
+
+if(phone.length!=10){
+
+alert("Phone number should contain 10 digits.");
+
+}
+
+}
+
+function showFee(){
+
+let event=document.getElementById("eventType");
+
+let fee=event.value;
+
+document.getElementById("fee").innerHTML=
+"Event Fee : "+fee;
+
+localStorage.setItem("preferredEvent",event.selectedIndex);
+
+}
+
+function enlarge(img){
+
+img.style.width="400px";
+img.style.height="250px";
+
+}
+
+function countCharacters(){
+
+let count=document.getElementById("feedback").value.length;
+
+document.getElementById("count").innerHTML=
+"Characters : "+count;
+
+}
+
+function videoReady(){
+
+document.getElementById("videoMessage").innerHTML=
+"Video Ready To Play.";
+
+}
+
+window.onbeforeunload=function(){
+
+return "Are you sure you want to leave this page?";
+
+};
+
+window.onload=function(){
+
+let saved=localStorage.getItem("preferredEvent");
+
+if(saved!=null){
+
+document.getElementById("eventType").selectedIndex=saved;
+
+showFee();
+
+}
+
+}
+
+function clearPreference(){
+
+localStorage.clear();
+
+sessionStorage.clear();
+
+alert("Preferences Cleared.");
+
+}
+
+function findLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+
+showPosition,
+
+showError,
+
+{
+
+enableHighAccuracy:true,
+
+timeout:5000,
+
+maximumAge:0
+
+}
+
+);
+
+}
+
+else{
+
+document.getElementById("locationResult").innerHTML=
+
+"Geolocation not supported.";
+
+}
+
+}
+
+function showPosition(position){
+
+document.getElementById("locationResult").innerHTML=
+
+"Latitude : "
+
++position.coords.latitude+
+
+"<br>Longitude : "
+
++position.coords.longitude;
+
+}
+
+function showError(error){
+
+switch(error.code){
+
+case error.PERMISSION_DENIED:
+
+document.getElementById("locationResult").innerHTML=
+
+"Permission Denied.";
+
+break;
+
+case error.TIMEOUT:
+
+document.getElementById("locationResult").innerHTML=
+
+"Request Timed Out.";
+
+break;
+
+default:
+
+document.getElementById("locationResult").innerHTML=
+
+"Unable to fetch location.";
+
+}
+
+}
+
+console.log("Community Portal Loaded");
+
+let totalEvents=5;
+
+console.log(totalEvents);
+</script>
+
+</body>
+
+</html>
