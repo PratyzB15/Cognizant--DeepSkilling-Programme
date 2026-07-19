@@ -1,0 +1,583 @@
+/* ==========================================
+   Universal Selector
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+   Body
+========================================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#d9edf7 url("images/background.jpg") no-repeat center center fixed;
+
+    background-size:cover;
+
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+#mainHeader{
+
+    background:rgba(0,0,0,0.7);
+
+    padding:30px;
+
+    text-align:center;
+
+    font-size:40px;
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================================
+   Navigation Menu
+========================================== */
+
+.navMenu{
+
+    list-style-type:none;
+
+    background:#0d6efd;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.navMenu li{
+
+    margin:15px;
+
+    padding:10px;
+
+}
+
+/* ==========================================
+   Link Styling
+========================================== */
+
+.navMenu a:link{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+.navMenu a:visited{
+
+    color:#ffe082;
+
+}
+
+.navMenu a:hover{
+
+    color:yellow;
+
+    text-decoration:underline;
+
+}
+
+.navMenu a:active{
+
+    color:red;
+
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+h2{
+
+    width:60%;
+
+    margin:30px auto;
+
+    background:linear-gradient(to right,#2193b0,#6dd5ed);
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   Event Cards
+========================================== */
+
+.eventCard{
+
+    width:60%;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background:rgba(255,255,255,0.9);
+
+    border-radius:10px;
+
+}
+
+.eventCard h3{
+
+    color:#0d6efd;
+
+    text-align:center;
+
+}
+
+.eventCard p{
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.btn{
+
+    display:block;
+
+    margin:30px auto;
+
+    padding:15px 30px;
+
+    background:green;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+.btn:hover{
+
+    background:darkgreen;
+
+}
+
+/* ==========================================
+   Resource List
+========================================== */
+
+.resourceList{
+
+    width:60%;
+
+    margin:20px auto;
+
+    list-style-type:square;
+
+    list-style-position:inside;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+.resourceList li{
+
+    margin:10px 0;
+
+    padding:5px;
+
+}
+
+/* Resource Links */
+
+.resourceList a:link{
+
+    color:blue;
+
+}
+
+.resourceList a:visited{
+
+    color:purple;
+
+}
+
+.resourceList a:hover{
+
+    color:green;
+
+}
+
+.resourceList a:active{
+
+    color:red;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+footer{
+
+    margin-top:40px;
+
+    background:rgba(0,0,0,0.8);
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* ==========================================
+   Event Table Styling
+========================================== */
+
+.eventTable{
+
+    width:80%;
+
+    margin:30px auto;
+
+    border-collapse:collapse;
+
+    background:white;
+
+}
+
+/* Table Header */
+
+.eventTable th{
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:2px solid #333;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+/* Table Data */
+
+.eventTable td{
+
+    border:2px solid #333;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+/* Zebra Striping */
+
+.eventTable tr:nth-child(even){
+
+    background:#f2f2f2;
+
+}
+
+/* Hover Effect */
+
+.eventTable tr:hover{
+
+    background:#d6eaf8;
+
+}
+
+/* ==========================================
+   Box Model Demonstration
+========================================== */
+
+.eventCard{
+
+    margin:30px auto;
+
+    padding:25px;
+
+    border:4px solid #0d6efd;
+
+    outline:3px dashed orange;
+
+    width:60%;
+
+    background:white;
+
+}
+
+/* ==========================================
+   Registration Form
+========================================== */
+
+.registrationForm{
+
+    width:60%;
+
+    margin:30px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+}
+
+.registrationForm input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid gray;
+
+    font-size:16px;
+
+}
+
+/* Outline Example */
+
+.highlight{
+
+    outline:4px solid red;
+
+}
+
+/* ==========================================
+   Visibility Demonstration
+========================================== */
+
+.visibleBox{
+
+    width:60%;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background:#90ee90;
+
+    text-align:center;
+
+    border:2px solid green;
+
+}
+
+.hiddenBox{
+
+    width:60%;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background:#ffcccb;
+
+    text-align:center;
+
+    border:2px solid red;
+
+    visibility:hidden;
+
+}
+
+.displayNoneBox{
+
+    width:60%;
+
+    margin:20px auto;
+
+    padding:20px;
+
+    background:yellow;
+
+    text-align:center;
+
+    border:2px solid orange;
+
+    display:none;
+
+}
+
+/* ==========================================
+   Multi-Column Layout
+========================================== */
+
+.newsArticle{
+
+    width:80%;
+
+    margin:30px auto;
+
+    padding:25px;
+
+    background:white;
+
+    border-radius:10px;
+
+    border:2px solid #0d6efd;
+
+    /* CSS3 Multiple Columns */
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+}
+
+.newsArticle p{
+
+    text-align:justify;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+/* Flexbox Navigation */
+
+.navMenu{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Flexible Widths */
+
+.eventCard,
+.registrationForm,
+.newsArticle,
+.resourceList,
+.eventTable{
+
+    width:80%;
+
+}
+
+/* Responsive Image (if added later) */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ==========================================
+   Media Query
+========================================== */
+
+@media screen and (max-width:768px){
+
+    body{
+
+        font-size:90%;
+
+    }
+
+    #mainHeader{
+
+        font-size:7vw;
+
+        padding:20px;
+
+    }
+
+    h2{
+
+        width:90%;
+
+        font-size:5vw;
+
+    }
+
+    .eventCard,
+    .registrationForm,
+    .newsArticle,
+    .resourceList,
+    .eventTable{
+
+        width:95%;
+
+    }
+
+    /* Navigation becomes vertical */
+
+    .navMenu{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .navMenu li{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .btn{
+
+        width:80%;
+
+        font-size:16px;
+
+    }
+
+    table{
+
+        font-size:14px;
+
+    }
+
+}
