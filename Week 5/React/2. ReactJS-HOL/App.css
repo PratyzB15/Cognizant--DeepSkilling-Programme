@@ -1,0 +1,14 @@
+.App {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: green;
+    margin: 20px;
+}
