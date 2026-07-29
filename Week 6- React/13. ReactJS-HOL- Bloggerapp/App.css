@@ -1,0 +1,20 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: darkblue;
+}
+
+ul {
+  list-style-type: square;
+}
+
+hr {
+  margin: 20px 0;
+}
