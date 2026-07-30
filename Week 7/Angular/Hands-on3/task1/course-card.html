@@ -1,0 +1,31 @@
+<div class="card">
+
+    <h3>{{ course.name }}</h3>
+
+    <p>Course Code : {{ course.code }}</p>
+
+    <p>Credits : {{ course.credits }}</p>
+
+    @switch (course.gradeStatus) {
+
+        @case ('passed') {
+            <span class="passed">Passed</span>
+        }
+
+        @case ('failed') {
+            <span class="failed">Failed</span>
+        }
+
+        @case ('pending') {
+            <span class="pending">Pending</span>
+        }
+
+    }
+
+    <br><br>
+
+    <button (click)="enrollRequested.emit(course.id)">
+        Enroll
+    </button>
+
+</div>

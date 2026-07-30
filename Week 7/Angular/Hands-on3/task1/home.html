@@ -1,0 +1,55 @@
+<div class="home">
+
+    <h1>{{portalName}}</h1>
+
+    <p>
+        Manage your courses, enrollments and student profile.
+    </p>
+
+    <button
+        [disabled]="!isPortalActive"
+        (click)="onEnrollClick()">
+
+        Enroll Now
+
+    </button>
+
+    <br><br>
+
+    <p style="color:green">
+        {{message}}
+    </p>
+
+    <input
+        type="text"
+        placeholder="Search Course"
+        [(ngModel)]="searchTerm">
+
+    <p>
+
+        Searching for:
+
+        {{searchTerm}}
+
+    </p>
+
+    <div class="stats">
+
+        <div class="card">
+            <h2>{{coursesAvailable}}</h2>
+            <p>Courses Available</p>
+        </div>
+
+        <div class="card">
+            <h2>3</h2>
+            <p>Enrolled</p>
+        </div>
+
+        <div class="card">
+            <h2>3.8</h2>
+            <p>GPA</p>
+        </div>
+
+    </div>
+
+</div>
