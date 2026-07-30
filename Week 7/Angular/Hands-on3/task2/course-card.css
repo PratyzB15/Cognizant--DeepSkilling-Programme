@@ -1,0 +1,23 @@
+.course-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Applied when course is enrolled */
+.card--enrolled {
+    background-color: #e8f5e9;
+    border-color: green;
+}
+
+/* Applied when credits >= 4 */
+.card--full {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Applied when Show Details is clicked */
+.expanded {
+    min-height: 220px;
+}
